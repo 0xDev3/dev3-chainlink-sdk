@@ -3,8 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "outDir": "./lib",
     "strict": true
   },
-  "include": ["src"],
+  "include": ["src", "data-feeds"],
 }

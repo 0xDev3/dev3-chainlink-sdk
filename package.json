@@ -1,11 +1,11 @@
 {
   "name": "dev3-chainlink-sdk",
-  "version": "0.5.0",
+  "version": "1.0.2",
   "files": ["lib/**/*"],
   "description": "Dev3 SDK to access Chainlink features easily in-browser",
   "main": "index.js",
   "scripts": {
-    "build-feeds": "npx ts-node prebuild.ts",
+    "prebuild": "npx ts-node prebuild.ts",
     "start": "npx ts-node index.ts",
     "build": "tsc"
   },

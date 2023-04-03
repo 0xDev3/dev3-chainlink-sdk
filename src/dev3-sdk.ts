@@ -1,10 +1,9 @@
 import { ethers } from 'ethers';
-import { ETHPriceFeeds } from '../data-feeds/eth-data-feed';
-import { PriceFeedModel, RoundDataModel } from "../types/price-feeds-model"
+import { PriceFeedItemModel, PriceFeedModel, RoundDataModel } from "../types/price-feeds-model"
 
-export class Dev3ChainlinkSDK {
+export class Dev3ChainlinkSDK<T extends PriceFeedModel> {
 
-    ethFeeds = ETHPriceFeeds
+    feeds: T
 
     private _aggregatorV3Interface = [
         "function decimals() external view returns (uint8)",
@@ -16,11 +15,12 @@ export class Dev3ChainlinkSDK {
 
     private _provider;
 
-    constructor(rpcURL: string) {
-        this._provider = new ethers.providers.JsonRpcProvider(rpcURL, "mainnet")
+    constructor(rpcURL: string, feeds: T) {
+        this._provider = new ethers.providers.JsonRpcProvider(rpcURL, feeds.network)
+        this.feeds = feeds
     }
 
-    async getFromOracle(feed: PriceFeedModel) {
+    async getFromOracle(feed: PriceFeedItemModel) {
         const AggregatorV3Contract = new ethers.Contract(
             feed.address, 
             this._aggregatorV3Interface, 
@@ -38,5 +38,4 @@ export class Dev3ChainlinkSDK {
         return mappedData
     }
 }
-
 

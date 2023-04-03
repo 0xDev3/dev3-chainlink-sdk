@@ -1,10 +1,12 @@
 import { BigNumber } from "ethers";
-export interface PriceFeedModel {
+export interface PriceFeedItemModel {
     address: string;
     name: string;
     assetName: string;
     feedType: string;
-    decimals?: string;
+}
+export interface PriceFeedModel {
+    network: number;
 }
 export interface RoundDataModel {
     roundID: BigNumber;
