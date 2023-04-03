@@ -1,12 +1,20 @@
 import { BigNumber } from "ethers"
 
-export interface PriceFeedModel {
+export interface PriceFeedItemModel {
     address: string
     name: string
-    assetName: string,
-    feedType: string,
-    decimals?: string
+    assetName: string
+    feedType: string
 }
+
+export interface PriceFeedModel {
+    network: number
+}
+
+// address: "0x01A1F73b1f4726EB6EB189FFA5CBB91AF8E14025",
+//                     name: "JPY / USD",
+//                     assetName: "Japanese Yen",
+//                     feedType: "Forex"
 
 export interface RoundDataModel {
     roundID: BigNumber,

@@ -1,6 +1,6 @@
 import { PriceFeedItemModel, PriceFeedModel } from "../types/price-feeds-model";
-export declare class PriceFeedsETH implements PriceFeedModel {
-    network: number;
+export declare class PriceFeedsMainnet implements PriceFeedModel {
+    network: string;
     JPY_USD: PriceFeedItemModel;
     UST_USD: PriceFeedItemModel;
     FOX_USD: PriceFeedItemModel;

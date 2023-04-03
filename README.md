@@ -14,13 +14,14 @@ npm install dev3-chainlink-sdk
 Initialize the SDK by calling:
 
 ```ts
-const sdk = new Dev3ChainlinkSDK('https://rpc-node-url.xx')
+const ethSDK = new Dev3ChainlinkSDK('https://rpc-node-url.xx', new PriceFeedsETH())
+const avaxSDK = new Dev3ChainlinkSDK('https://avax-rpc-url.xx', new PriceFeedsAVAX())
 ```
 
 And simply fetch a price pair by calling the price feeds functionality on the SDK:
 
 ```ts
-sdk.getFromOracle(sdk.ethFeeds.AAVE_ETH).then(res => { console.log(res) })
+ethSDK.getFromOracle(ethSDK.feeds.AAVE_ETH).then(res => { console.log(res) })
 ```
 
 ## Modern development
