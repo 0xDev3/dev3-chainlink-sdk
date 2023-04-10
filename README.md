@@ -5,14 +5,28 @@ Users can fetch price pairs, NFT floor price information & more...
 
 ## Getting started
 
-Install the SDK by typing 
+Install the SDK by installing the npm package in your frontend or npm project:
 
 ```bash
 npm install dev3-chainlink-sdk
 ```
 
-Initialize the SDK by calling:
+In your JavaScript or Typescript file, import the SDK files for the core SDK
 
+```ts
+import { Dev3ChainlinkSDK } from 'dev3-chainlink-sdk/lib/src/dev3-sdk'
+```
+
+and then for every chain which you wish to use:
+
+e.g.
+```ts
+import { PriceFeedsETH } from 'dev3-chainlink-sdk/lib/data-feeds/ETH-data-feed'
+import { PriceFeedsAVAX } from 'dev3-chainlink-sdk/lib/data-feeds/avax-data-feed'
+import { PriceFeedsBSC } from 'dev3-chainlink-sdk/lib/data-feeds/bsc-data-feed'
+```
+
+in your JavaScript/TypeScript file - you can use the SDK in the following way
 ```ts
 const ethSDK = new Dev3ChainlinkSDK('https://rpc-node-url.xx', new PriceFeedsETH())
 const avaxSDK = new Dev3ChainlinkSDK('https://avax-rpc-url.xx', new PriceFeedsAVAX())
@@ -21,7 +35,10 @@ const avaxSDK = new Dev3ChainlinkSDK('https://avax-rpc-url.xx', new PriceFeedsAV
 And simply fetch a price pair by calling the price feeds functionality on the SDK:
 
 ```ts
-ethSDK.getFromOracle(ethSDK.feeds.AAVE_ETH).then(res => { console.log(res) })
+ethSDK.getFromOracle(ethSDK.feeds.AAVE_ETH).then(res => { 
+    // res variable contains your price feed info
+    console.log(res) 
+})
 ```
 
 ## Modern development
