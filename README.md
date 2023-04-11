@@ -7,7 +7,7 @@ Users can fetch price pairs, NFT floor price information & more...
 
 Install the SDK by typing in your npm project (Angular, React, vanilla npm, ...)
 
-```bash
+```sh
 npm install dev3-chainlink-sdk
 ```
 
