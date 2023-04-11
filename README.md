@@ -5,10 +5,24 @@ Users can fetch price pairs, NFT floor price information & more...
 
 ## Getting started
 
-Install the SDK by typing 
+Install the SDK by typing in your npm project (Angular, React, vanilla npm, ...)
 
 ```bash
 npm install dev3-chainlink-sdk
+```
+
+In your JavaScript or TypeScript file import the SDK with:
+
+```ts
+import { Dev3ChainlinkSDK } from 'dev3-chainlink-sdk/lib/src/dev3-sdk'
+```
+
+Then import all the Price Feeds you want:
+
+```ts
+import { PriceFeedsETH } from 'dev3-chainlink-sdk/lib/data-feeds/ETH-data-feed'
+import { PriceFeedsAVAX } from 'dev3-chainlink-sdk/lib/data-feeds/avax-data-feed'
+import { PriceFeedsBSC } from 'dev3-chainlink-sdk/lib/data-feeds/bsc-data-feed'
 ```
 
 Initialize the SDK by calling:
