@@ -62,6 +62,10 @@ export interface RoundDataModel {
 }
 ```
 
+## Example app
+
+Take a look at [Example React App](https://github.com/0xDev3/chainlink-sdk-example-react-app) too see how to use Chainlink Dev3 SDK inside your project!
+
 ## License
 
 Dev3 Chainlink SDK is fully open source, clonable & re-usable. Dev3 retains no rights to the code or implementations. 
