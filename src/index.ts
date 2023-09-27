@@ -1,4 +1,4 @@
-import { ethers, JsonRpcProvider } from 'ethers';
+import { JsonRpcProvider, Contract } from 'ethers';
 import { PriceFeedItemModel, PriceFeedModel, RoundDataModel } from "../types/price-feeds-model"
 
 import { PriceFeedsETH } from "../data-feeds/eth-data-feed";
@@ -32,7 +32,7 @@ export class Dev3ChainlinkSDK<T extends PriceFeedModel> {
     }
 
     async getFromOracle(feed: PriceFeedItemModel) {
-        const AggregatorV3Contract = new ethers.Contract(
+        const AggregatorV3Contract = new Contract(
             feed.address, 
             this._aggregatorV3Interface, 
             this._provider
