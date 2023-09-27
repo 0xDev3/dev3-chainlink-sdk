@@ -1,14 +1,17 @@
 {
   "name": "dev3-chainlink-sdk",
   "version": "1.0.2",
+  "main": "dist/node/index.js",
+  "module": "dist/node/index.js",
+  "browser": "dist/browser/index.js",
+  "types": "dist/src/index.d.ts",
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "dist/**/*"
   ],
   "description": "Dev3 SDK to access Chainlink features easily in-browser",
-  "main": "index.js",
   "scripts": {
     "prebuild": "npx ts-node prebuild.ts",
-    "start": "npx ts-node index.ts",
     "build": "rm -rf ./lib && tsup && tsc"
   },
   "keywords": [

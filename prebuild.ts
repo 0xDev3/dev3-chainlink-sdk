@@ -59,14 +59,3 @@ const avaxView = {
 createFile("ETH", ethView, 1)
 createFile("BSC", bscView, 56)
 createFile("AVAX", avaxView, 43114)
-
-
-
-
-
-
-
-
-
-
-

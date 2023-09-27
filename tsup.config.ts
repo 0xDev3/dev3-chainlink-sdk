@@ -6,7 +6,7 @@ import stdLibBrowser from 'node-stdlib-browser';
 export default defineConfig([
   {
     name: 'browser',
-    entry: ['src/dev3-sdk.ts'],
+    entry: ['src/index.ts'],
     sourcemap: true,
     platform: 'browser',
     clean: true,
@@ -22,7 +22,7 @@ export default defineConfig([
   },
   {
     name: 'node',
-    entry: ['src/dev3-sdk.ts'],
+    entry: ['src/index.ts'],
     sourcemap: true,
     platform: 'node',
     clean: true,
