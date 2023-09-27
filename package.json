@@ -1,5 +1,5 @@
 {
-  "name": "dev3-chainlink-sdk",
+  "name": "dev3-chainlink-feeds",
   "version": "1.0.3",
   "main": "dist/node/index.js",
   "module": "dist/node/index.js",
