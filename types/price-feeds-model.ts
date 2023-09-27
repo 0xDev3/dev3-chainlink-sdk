@@ -1,5 +1,3 @@
-import { BigNumber } from "ethers"
-
 export interface PriceFeedItemModel {
     address: string
     name: string
@@ -12,12 +10,12 @@ export interface PriceFeedModel {
 }
 
 export interface RoundDataModel {
-    roundID: BigNumber,
-    answer: BigNumber,
+    roundID: BigInt,
+    answer: BigInt,
     formattedAnswer?: string,
-    startedAt: BigNumber,
-    updatedAt: BigNumber,
-    answeredInRound: BigNumber
+    startedAt: BigInt,
+    updatedAt: BigInt,
+    answeredInRound: BigInt
     assetName?: string
     dataFeedName?: string
 }

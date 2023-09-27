@@ -1,4 +1,4 @@
-import { ethers } from 'ethers';
+import { ethers, JsonRpcProvider } from 'ethers';
 import { PriceFeedItemModel, PriceFeedModel, RoundDataModel } from "../types/price-feeds-model"
 
 import { PriceFeedsETH } from "../data-feeds/eth-data-feed";
@@ -27,7 +27,7 @@ export class Dev3ChainlinkSDK<T extends PriceFeedModel> {
     private _provider;
 
     constructor(rpcURL: string, feeds: T) {
-        this._provider = new ethers.providers.JsonRpcProvider(rpcURL, feeds.network)
+        this._provider = new JsonRpcProvider(rpcURL, feeds.network)
         this.feeds = feeds
     }
 
