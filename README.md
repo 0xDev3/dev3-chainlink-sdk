@@ -20,9 +20,9 @@ import { Dev3ChainlinkSDK } from 'dev3-chainlink-feeds'
 Then import all the Price Feeds you want:
 
 ```ts
-import { PriceFeedsETH } from 'dev3-chainlink-feeds/dist/data-feeds/eth-data-feed'
-import { PriceFeedsAVAX } from 'dev3-chainlink-feeds/dist/data-feeds/avax-data-feed'
-import { PriceFeedsBSC } from 'dev3-chainlink-feeds/dist/data-feeds/bsc-data-feed'
+import { PriceFeedsETH } from 'dev3-chainlink-feeds'
+import { PriceFeedsAVAX } from 'dev3-chainlink-feeds'
+import { PriceFeedsBSC } from 'dev3-chainlink-feeds'
 ```
 
 Initialize the SDK by calling:

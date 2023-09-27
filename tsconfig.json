@@ -28,5 +28,5 @@
       "module": "commonjs"
     }
   },
-  "include": ["src", "data-feeds", "prebuild.ts"]
+  "include": ["src", "data-feeds", "types", "prebuild.ts"]
 }

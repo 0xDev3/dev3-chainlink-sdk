@@ -1,6 +1,17 @@
 import { ethers } from 'ethers';
 import { PriceFeedItemModel, PriceFeedModel, RoundDataModel } from "../types/price-feeds-model"
 
+import { PriceFeedsETH } from "../data-feeds/eth-data-feed";
+import { PriceFeedsAVAX } from "../data-feeds/avax-data-feed";
+import { PriceFeedsBSC } from "../data-feeds/bsc-data-feed";
+
+export {
+    PriceFeedModel,
+    PriceFeedsETH,
+    PriceFeedsAVAX,
+    PriceFeedsBSC
+}
+
 export class Dev3ChainlinkSDK<T extends PriceFeedModel> {
 
     feeds: T
@@ -38,4 +49,3 @@ export class Dev3ChainlinkSDK<T extends PriceFeedModel> {
         return mappedData
     }
 }
-
