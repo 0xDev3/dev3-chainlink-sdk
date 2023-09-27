@@ -1,12 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es2016",
+    "lib": ["dom", "ESNext"],
+    "module": "ESNext",
     "declaration": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
+    "emitDeclarationOnly": true,
+    "sourceMap": true,
     "esModuleInterop": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "skipLibCheck": true,
     "outDir": "./lib",
     "strict": true
   },
-  "include": ["src", "data-feeds"],
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    // same as the --compilerOptions flag and the TS_NODE_COMPILER_OPTIONS environment variable
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["src", "data-feeds", "prebuild.ts"]
 }

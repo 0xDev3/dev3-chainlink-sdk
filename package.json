@@ -1,13 +1,15 @@
 {
   "name": "dev3-chainlink-sdk",
   "version": "1.0.2",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "description": "Dev3 SDK to access Chainlink features easily in-browser",
   "main": "index.js",
   "scripts": {
     "prebuild": "npx ts-node prebuild.ts",
     "start": "npx ts-node index.ts",
-    "build": "tsc"
+    "build": "rm -rf ./lib && tsup && tsc"
   },
   "keywords": [
     "sdk"
@@ -15,11 +17,14 @@
   "author": "AnonS",
   "license": "MIT",
   "devDependencies": {
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@types/mustache": "^4.2.2",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
     "eslint-plugin-react": "^7.32.2",
+    "node-stdlib-browser": "^1.2.0",
+    "tsup": "^7.2.0",
     "typescript": "^5.0.2"
   },
   "dependencies": {
